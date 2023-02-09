@@ -4,15 +4,16 @@
 // от 1 до 50 включительно. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t1() {
-    let out = document.querySelector(".out-1");
-    let outStr = '';
+    let out  = '';
     let i = 0;
     while (i < 50){
         i++;
-        outStr +=i + '_';
+        out +=i + '_';
     }
-    out.innerHTML += outStr
+    document.querySelector('.out-1').innerHTML = out ;
 }
+
+
 document.querySelector(".b-1").onclick = t1;
 
 //  Task 2
@@ -21,17 +22,13 @@ document.querySelector(".b-1").onclick = t1;
 // от 2 до 46 c шагом 2. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла  while.
 
 function t2() {
-    let out = document.querySelector('.out-2');
-    let outStr = '';
+    let out = '';
     let i = 0;
     while(i < 46){
         i = i + 2;
-        outStr +=i + '_';
+        out +=i + '_';
     }
-    out.innerHTML +=outStr;
-    
-
-
+    document.querySelector('.out-2').innerHTML = out;
 }
 
 document.querySelector(".b-2").onclick = t2;
@@ -49,7 +46,7 @@ function t3() {
         outStr +=i + '_';
         i--;
     }
-    out.innerHTML +=outStr;
+    out.innerHTML = outStr;
 }
 
 document.querySelector(".b-3").onclick = t3;
@@ -67,7 +64,7 @@ function t4() {
         outStr +=i + '_';
         i = i - 3;
     }
-    out.innerHTML += outStr;
+    out.innerHTML = outStr;
 }
 
 document.querySelector(".b-4").onclick = t4;
@@ -90,7 +87,7 @@ function t5() {
             outStr +=i + '_*';
         }
     }
-    out.innerHTML +=outStr
+    out.innerHTML = outStr
 }
 
 document.querySelector(".b-5").onclick = t5;
@@ -112,7 +109,7 @@ function t6() {
         i++;
         outStr +=`******<br>`;
     }
-    out.innerHTML += outStr;
+    out.innerHTML = outStr;
 }
 
 
@@ -133,7 +130,7 @@ function t7() {
         outStr +=i + '_';
         i--;
     }
-    out.innerHTML += outStr;
+    out.innerHTML = outStr;
     
 }
 
@@ -204,7 +201,7 @@ function t10() {
         outStr +=i + '_' 
         i++;
     }
-    out.innerHTML +=outStr
+    out.innerHTML = outStr
 }
 
 document.querySelector(".b-10").onclick = t10;
@@ -226,7 +223,7 @@ function t11() {
         str +=divs[i].textContent + '_';
         i++;
    }
-   out.innerHTML += str
+   out.innerHTML = str
 }
 
 
@@ -244,10 +241,10 @@ function t12() {
     let str = '';
     let i = 0;
     while(i < divs.length){
-        str +=divs[i].style.background = 'orange'
-        i++
+        str +=divs[i].style.background = 'orange';
+        i++;
     }
-    out.innerHTML += str
+    out.innerHTML = str
 }
 
 document.querySelector(".b-12").onclick = t12;
@@ -267,7 +264,7 @@ function t13() {
         str +=inp[i].value = i + 1
         i++;
     }
-    out.innerHTML +=str
+    out.innerHTML = str
 }
 
 document.querySelector(".b-13").onclick = t13;
@@ -288,9 +285,7 @@ function t14() {
         str +=inp[i].value;
         i++;   
     }
-    out.innerHTML +=str;
-    
-    
+    out.innerHTML = str;
 }
 
 document.querySelector(".b-14").onclick = t14;
@@ -304,15 +299,12 @@ function t15() {
     let out = document.querySelector('.out-15');
     let i = 77;
     let str = '';
-    let p = 0;
-    while(p < 3){
         while(i <= 99){
-            str +=i + '_' 
+            str +=i + '_' ;
             i = i + 11;
         }
-        p++;
-        out.innerHTML += str;
+        out.innerHTML = str + str + str;    
     }
-}
+
 
 document.querySelector(".b-15").onclick = t15;
